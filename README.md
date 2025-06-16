@@ -1,5 +1,45 @@
-# lol-data-analysis
+# Predicting League of Legends Role based on End-Game Stats
 
-#### This is a Data Analysis project on a League of Legends dataset from 2022 using professional games.
+by Elissa Coury
 
-##### This is a second try at updating README.
+---
+
+## Introduction
+
+
+
+---
+
+## Data Cleaning and Exploratory Data Analysis
+
+
+
+---
+
+## Hypothesis Testing
+
+
+
+---
+
+## Framing a Prediction Problem
+
+
+
+---
+
+## Baseline Model
+
+
+
+---
+
+## Final Model
+
+
+
+---
+
+## Fairness Analysis
+
+
