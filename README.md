@@ -99,12 +99,12 @@ I also changed the 'firstbloodkill' column to boolean type values, as they previ
 
 
 ### Univariate Analysis
-<iframe src="assets/earned-gpm-histogram.html" width="800" height="600" frameborder="0" ></iframe>
+<iframe src="/lol-data-analysis/assets/earned-gpm-histogram.html" width="800" height="600" frameborder="0" ></iframe>
 
 This histogram shows a distribution of the earned gold per minute among all player entries. It shows a slightly right skewed distribution. Most player's game stats for this are on the lower end, and fewer players gain high amounts of gold per minute in games.
 
 ### Bivariate Analysis
-<iframe src="assets/avg-egpm-by-position.html" width="800" height="600" frameborder="0" ></iframe>
+<iframe src="/lol-data-analysis/assets/avg-egpm-by-position.html" width="800" height="600" frameborder="0" ></iframe>
 
 This shows the distribution of average earned gold per minute distinguished by posiiton (using a grouped histogram of 'earned gpm' by 'position'). This shows which positions, on average, earn less gold per minute (jungle and support).
 
