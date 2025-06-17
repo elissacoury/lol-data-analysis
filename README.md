@@ -96,32 +96,15 @@ I then had to determine if there was any specific games that were missing a lot 
 
 I also changed the 'firstbloodkill' column to boolean type values, as they previosuly were represented as floats before and included many nan values. I also created kills per minute (kpm) and gold spent per minute (gspm) columns using the 'kills' and 'goldspent' column divided by the 'gamelength' column (made to minutes by diving by 60), to get the average. The average for these would be important because game length can vary and these values can hold different weights based on the time they were done in.
 
----
-
-## Assessment of Missingness
-
-The columns 'goldat_', 'xpat_', 'csat_', 'opp_goldat_', 'opp_xpat_', 'opp_csat_', 'golddiffat_', 'xpdiffat_', 'csdiffat_', 'killsat_', 'assistsat_', 'deathsat_', 'opp_killsat_', 'opp_assistsat_', 'opp_deathsat_' (for 10, 15, 20, 25 minutes) would logically make sense to be NMAR. This is because their missingness is related to the data reported. If there is no data recorded for these values, it could be attributed to the fact that the game might not be occurring at that time. In this case, it's related to the nature of the feature, as it is specifically about game stats at a specific time. This makes it seem NMAR.
-
-However, there is a gamelength column, which is in seconds. This technically makes it Missing At Random (MAR), because we can look at that column to determine if the other columns will be missing. This dependancy makes the previous columns MAR.
 
 
 ### Univariate Analysis
-<iframe
-  src="lol-data-analysis/earned-gpm-histogram.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+<iframe src="lol-data-analysis/earned-gpm-histogram.html" width="800" height="600" frameborder="0" ></iframe>
 
 This histogram shows a distribution of the earned gold per minute among all player entries. It shows a slightly right skewed distribution. Most player's game stats for this are on the lower end, and fewer players gain high amounts of gold per minute in games.
 
 ### Bivariate Analysis
-<iframe
-  src="lol-data-analysis/avg-egpm-by-position.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+<iframe src="lol-data-analysis/avg-egpm-by-position.html" width="800" height="600" frameborder="0" ></iframe>
 
 This shows the distribution of average earned gold per minute distinguished by posiiton (using a grouped histogram of 'earned gpm' by 'position'). This shows which positions, on average, earn less gold per minute (jungle and support).
 
@@ -136,6 +119,16 @@ This shows the distribution of average earned gold per minute distinguished by p
 | top        |   5.02403 |                734.169 |  2.95377 | 488.639 |      257.898 | 364.067 | 2.79676 |       30.8533 |
 
 This is a pivot table, showing the averaged values for relevant columns when assessing player stats. It shows interesting information, where the bottom and support positions take less damage than other positions and jungle takes the most. Support also has much higher vision score with much loser # of average kills. These can help when formualting a prediction problem, and determing what columns provide the most information about positions.
+
+---
+
+## Assessment of Missingness
+
+The columns 'goldat_', 'xpat_', 'csat_', 'opp_goldat_', 'opp_xpat_', 'opp_csat_', 'golddiffat_', 'xpdiffat_', 'csdiffat_', 'killsat_', 'assistsat_', 'deathsat_', 'opp_killsat_', 'opp_assistsat_', 'opp_deathsat_' (for 10, 15, 20, 25 minutes) would logically make sense to be NMAR. This is because their missingness is related to the data reported. If there is no data recorded for these values, it could be attributed to the fact that the game might not be occurring at that time. In this case, it's related to the nature of the feature, as it is specifically about game stats at a specific time. This makes it seem NMAR.
+
+However, there is a gamelength column, which is in seconds. This technically makes it Missing At Random (MAR), because we can look at that column to determine if the other columns will be missing. This dependancy makes the previous columns MAR.
+
+
 
 ---
 
